@@ -36,13 +36,16 @@ const CONFIG = {
 
 Since I can't be there in person today to actually hand you a gift, I wanted to do something a little different. I built this website for you to give you something you can keep and look at whenever you miss me, even with all these miles between us.
 
+It’s funny to think that all of this started with a good conversation on the Red app. At first, it was just that—a good conversation. But then August 16 came. I thought what I was feeling was just kabag, but it wasn’t. That was the day I realized I had fallen for you. And now here we are, loving each other, and I’m one of the luckiest people in the world because I have you—a gorgeous, loving, and caring girl. If anyone asks who I’d choose, it’s no one but you: every second, every minute, every hour, every day.
+
 Thank you for being the person who makes everything a little lighter. For the inside jokes, the patience, the way you turn a bad day around without even trying. For giving me peace, and for always being honest with me. I see how much you love your students and honestly, it inspires me more than you know.
 
 I hope this year is kind to you. I hope you get the things you've been quietly hoping for. And I want you to know that whatever happens, you've got me completely, ridiculously, in your corner.
 
 Happy birthday, my favourite person.
 
-Yours, always.`,
+Yours, always.
+Loafy.`,
 
   gift: "I know this will be the simplest birthday that you'll receive this year, but I just want you to know that I made this with love. I built this website using the immense love I have for you. Even though we are miles apart right now, I hope you feel how much you are cherished today. Happy birthday, my love. 💌"
 };
