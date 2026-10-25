@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday, My Love 💖</title>
+<link rel="icon" type="image/jpeg" href="images/2.jpg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 🎵 BACKGROUND MUSIC -->
+<audio id="bgMusic" loop preload="auto" src="bestpart.mp3"></audio>
+
+<button id="musicBtn" aria-label="Toggle music">♪</button>
+
+<!-- ================= GATE ================= -->
+<div id="gate">
+  <div class="gate-box">
+    <!-- GATE PHOTO -->
+    <div class="love-photo-wrap">
+      <img src="images/1.png" alt="My Love" class="love-photo">
+    </div>
+    <p class="gate-title">Hi my love 💕</p>
+    <p class="gate-hint">I made something little for you</p>
+    <button id="openBtn">Tap to open</button>
+  </div>
+</div>
+
+<!-- ================= SLIDES ================= -->
+<div id="app">
+
+  <!-- SLIDE 1 · INTRO -->
+  <section class="slide" data-slide="intro">
+    <div class="slide-inner intro">
+      <p class="kicker">Happiest birthday to</p>
+      <h1 id="nameOut">My Love</h1>
+
+      <!-- INTRO PHOTO -->
+      <div class="hero-photo">
+        <div class="love-photo-wrap">
+          <img src="images/1.png" alt="My Love" class="love-photo">
+        </div>
+      </div>
+
+      <p class="sub" id="heroLine"></p>
+      <div class="stats">
+        <div class="stat"><b id="statTogether">0</b><span>days together</span></div>
+        <div class="stat"><b id="statAlive">0</b><span>days of you</span></div>
+        <div class="stat"><b id="statHugs">0</b><span>hugs given</span></div>
+      </div>
+      <button id="hugBtn">Send a hug 🤗</button>
+      <p class="swipe-hint">Swipe or tap Next →</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 2 · GIFS -->
+  <section class="slide" data-slide="gifs">
+    <div class="slide-inner">
+      <h2>Little mood board of us</h2>
+      <p class="lead">Because some feelings are best said in GIFs.</p>
+      <div class="gif-strip" id="gifStrip"></div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3 · REASONS -->
+  <section class="slide" data-slide="reasons">
+    <div class="slide-inner">
+      <h2>Reasons I love you</h2>
+      <p class="lead">Tap each card to peek inside 💗</p>
+      <div class="reasons" id="reasons"></div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4 · TIMELINE -->
+  <section class="slide" data-slide="timeline">
+    <div class="slide-inner">
+      <h2>Our cute little story</h2>
+      <p class="lead">A few of my favourite chapters.</p>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5 · CAKE -->
+  <section class="slide" data-slide="cake">
+    <div class="slide-inner cake-slide">
+      <h2>Make a wish</h2>
+      <p class="lead">Blow out the candles — tap each little flame.</p>
+      <div class="cake">
+        <div class="candles">
+          <div class="candle"><div class="flame"></div><div class="stick"></div></div>
+          <div class="candle"><div class="flame"></div><div class="stick"></div></div>
+          <div class="candle"><div class="flame"></div><div class="stick"></div></div>
+          <div class="candle"><div class="flame"></div><div class="stick"></div></div>
+          <div class="candle"><div class="flame"></div><div class="stick"></div></div>
+        </div>
+        <div class="tier top"></div>
+        <div class="tier bottom"></div>
+        <div class="plate"></div>
+      </div>
+      <p class="cake-msg" id="wishMsg">✨ Wish made, my love. I hope it comes true. ✨</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 6 · LETTER -->
+  <section class="slide" data-slide="letter">
+    <div class="slide-inner">
+      <h2>A letter for you</h2>
+      <p class="lead">Read it slowly, okay?</p>
+      <p class="letter" id="letterText"></p>
+    </div>
+  </section>
+
+  <!-- SLIDE 7 · GIFT -->
+  <section class="slide" data-slide="gift">
+    <div class="slide-inner gift-slide">
+      <h2>One last surprise</h2>
+      <p class="lead">Tap the box, my love.</p>
+      <div class="gift-box" id="giftBox" role="button" tabindex="0" aria-label="Open your gift">
+        <div class="gift-bow">🎀</div>
+        <div class="gift-body"></div>
+        <div class="gift-ribbon-v"></div>
+        <div class="gift-lid"></div>
+        <div class="gift-ribbon-h"></div>
+      </div>
+      <div class="gift-reveal" id="giftReveal"></div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8 · FINALE -->
+  <section class="slide" data-slide="finale">
+    <div class="slide-inner finale">
+      <div class="big-heart">💖</div>
+      <h2>Happy birthday, <span id="finaleName">my love</span></h2>
+      <p id="finaleLine">I love you. Every single day.</p>
+      <button id="moreHearts">One more hug 🤗</button>
+    </div>
+  </section>
+
+</div>
+
+<!-- ================= NAVIGATION ================= -->
+<nav id="nav" aria-label="Slide navigation">
+  <button id="prevBtn" aria-label="Previous slide">‹</button>
+  <button id="nextBtn">Next →</button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
