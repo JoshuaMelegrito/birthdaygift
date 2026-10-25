@@ -244,7 +244,12 @@ h2{
   transition:opacity .5s, visibility .5s;
   max-width:calc(100% - 24px);
 }
-body.open #nav{opacity:1;visibility:visible}
+
+/* Changed this line */
+#nav.show{
+  opacity:1;visibility:visible;
+}
+
 #nav button{border:none;cursor:pointer;border-radius:999px;font-weight:800;font-family:inherit}
 #prevBtn{
   width:38px;height:38px;font-size:1.3rem;flex-shrink:0;
