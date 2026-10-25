@@ -164,7 +164,29 @@ musicBtn.addEventListener('click', () => isPlaying ? stopMusic() : startMusic())
 const slides  = [...document.querySelectorAll('.slide')];
 const prevBtn = qs('#prevBtn');
 const nextBtn = qs('#nextBtn');
+const nav = qs('#nav');
 let current = 0;
+
+function checkScroll(slide) {
+  if (!slide || !slide.classList.contains('active')) return;
+  
+  // 10px tolerance for sub-pixel rendering
+  const isAtBottom = Math.ceil(slide.scrollTop + slide.clientHeight) >= slide.scrollHeight - 10;
+  
+  if (isAtBottom && document.body.classList.contains('open')) {
+    nav.classList.add('show');
+  } else {
+    nav.classList.remove('show');
+  }
+}
+
+slides.forEach(slide => {
+  slide.addEventListener('scroll', () => checkScroll(slide));
+});
+
+window.addEventListener('resize', () => {
+  if (slides[current]) checkScroll(slides[current]);
+});
 
 function goTo(i){
   i = Math.max(0, Math.min(slides.length - 1, i));
@@ -172,6 +194,11 @@ function goTo(i){
   slides[i].scrollTop = 0;
   current = i;
   updateNav();
+
+  // Hide nav initially on slide change
+  nav.classList.remove('show');
+  // Wait for layout update, then check if the new slide is short enough to show nav immediately
+  setTimeout(() => checkScroll(slides[i]), 50);
 
   const name = slides[i].dataset.slide;
   if (name === 'letter') typeLetter();
