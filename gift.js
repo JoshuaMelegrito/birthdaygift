@@ -1,6 +1,3 @@
-/* =========================================================
-   ✏️ 1. EDIT EVERYTHING HERE
-   ========================================================= */
 const CONFIG = {
   name: "My Love",
   birthDate: "2004-10-26",
@@ -50,9 +47,6 @@ Yours, always.`,
   gift: "I know this will be the simplest birthday that you'll receive this year, but I just want you to know that I made this with love. I built this website using the immense love I have for you. Even though we are miles apart right now, I hope you feel how much you are cherished today. Happy birthday, my love. 💌"
 };
 
-/* =========================================================
-   ✨ 2. BOOT & RENDER
-   ========================================================= */
 const qs = s => document.querySelector(s);
 const daysSince = d => Math.max(0, Math.floor((Date.now() - new Date(d + 'T00:00:00')) / 86400000));
 
@@ -93,9 +87,6 @@ function render(){
   qs('#giftReveal').textContent = CONFIG.gift;
 }
 
-/* =========================================================
-   💗 3. FLOATING HEARTS
-   ========================================================= */
 const HEART_EMOJIS = ['💖','💕','💗','🌸','✨','🎀','💞','🩷'];
 
 function spawnHearts(n, x, y){
@@ -115,9 +106,7 @@ function spawnHearts(n, x, y){
   }
 }
 
-/* =========================================================
-   🎵 4. MUSIC (MP3 first → chime fallback)
-   ========================================================= */
+
 const musicEl  = qs('#bgMusic');
 const musicBtn = qs('#musicBtn');
 let isPlaying = false, usingFallback = false;
@@ -171,9 +160,7 @@ function updateBtn(){
 }
 musicBtn.addEventListener('click', () => isPlaying ? stopMusic() : startMusic());
 
-/* =========================================================
-   🎞️ 5. SLIDE CONTROLLER
-   ========================================================= */
+
 const slides  = [...document.querySelectorAll('.slide')];
 const prevBtn = qs('#prevBtn');
 const nextBtn = qs('#nextBtn');
@@ -229,9 +216,7 @@ document.addEventListener('touchend', e => {
   }
 }, { passive: true });
 
-/* =========================================================
-   🎁 6. OPEN THE GATE
-   ========================================================= */
+
 qs('#openBtn').addEventListener('click', e => {
   qs('#gate').classList.add('hide');
   document.body.classList.add('open');
@@ -240,9 +225,7 @@ qs('#openBtn').addEventListener('click', e => {
   goTo(0);
 });
 
-/* =========================================================
-   📜 7. TYPEWRITER LETTER
-   ========================================================= */
+
 let letterStarted = false;
 function typeLetter(){
   if (letterStarted) return;
@@ -257,9 +240,7 @@ function typeLetter(){
   })();
 }
 
-/* =========================================================
-   🔄 8. FLIP CARDS
-   ========================================================= */
+
 document.addEventListener('click', e => {
   const f = e.target.closest('.flip');
   if (f) f.classList.toggle('flipped');
@@ -274,9 +255,7 @@ document.addEventListener('keydown', e => {
   }
 });
 
-/* =========================================================
-   🤗 9. HUG BUTTON
-   ========================================================= */
+
 let hugCount = 0;
 qs('#hugBtn').addEventListener('click', e => {
   hugCount++;
@@ -288,9 +267,7 @@ qs('#moreHearts').addEventListener('click', e => {
   spawnHearts(28, e.clientX, e.clientY);
 });
 
-/* =========================================================
-   🎂 10. CAKE
-   ========================================================= */
+
 let blownOut = 0;
 const candles = [...document.querySelectorAll('.candle')];
 candles.forEach(c => {
@@ -306,9 +283,7 @@ candles.forEach(c => {
   });
 });
 
-/* =========================================================
-   🎀 11. GIFT
-   ========================================================= */
+
 const giftBox = qs('#giftBox');
 function openGift(){
   if (giftBox.classList.contains('opened')) return;
@@ -322,7 +297,5 @@ giftBox.addEventListener('keydown', e => {
   if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openGift(); }
 });
 
-/* =========================================================
-   🚀 GO
-   ========================================================= */
+
 render();
